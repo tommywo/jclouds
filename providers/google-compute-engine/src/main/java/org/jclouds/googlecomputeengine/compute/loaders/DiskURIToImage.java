@@ -44,7 +44,6 @@ public class DiskURIToImage extends CacheLoader<URI, Optional<Image>> {
 
    @Override
    public Optional<Image> load(URI key) throws ExecutionException {
-
       try {
          Disk disk = resources.disk(key);
          URI sourceImage = disk.sourceImage();

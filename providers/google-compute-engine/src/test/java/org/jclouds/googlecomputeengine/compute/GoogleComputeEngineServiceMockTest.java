@@ -159,8 +159,7 @@ public class GoogleComputeEngineServiceMockTest extends BaseGoogleComputeEngineA
       assertEquals(nodes.size(), 1);
       NodeMetadata node = (NodeMetadata) nodes.iterator().next();
       String imageId = node.getImageId();
-      assertEquals(imageId,null);
-
+      assertEquals(imageId, null);
       assertSent(server, "GET", "/projects/party/aggregated/instances");
       assertSent(server, "GET", "/projects/party/regions");
       assertSent(server, "GET", "/projects/party/zones/us-central1-a/disks/test");
